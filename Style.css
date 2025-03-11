@@ -1,0 +1,153 @@
+*{
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+
+.navbar{
+   background-color:#5FA8D3; 
+   display: flex;  
+   justify-content: space-around;   
+
+}
+.logo{
+    background-color: #5FA8D3;
+}
+.img{
+    height: 40px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#search{
+    border-radius: 3px;
+    border: 0px solid;
+    padding: 1px 5px 1px 5px ;
+    margin-top: 10px;
+    background-color: #1B4965;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+li {
+   margin-top: 10px; 
+   background-color: #5FA8D3;
+ 
+    
+}
+.navbar li a{ 
+    color:black;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: #5FA8D3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+   
+
+}
+
+
+
+.intro{
+    text-align: center;
+    margin: 1rem;
+    color: #1B4965;
+    
+}
+
+.footer{
+    background-color:#5FA8D3; 
+    color: black;
+    padding: 10px;
+    margin-top: 1rem;
+
+}
+
+.footer p{
+   background-color:#5FA8D3; 
+}
+
+.add {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.add h3{
+    font-size: 16px;  
+    font-weight: bold; 
+    text-align: center; 
+    height: 40px; 
+    line-height: 20px; 
+    overflow: hidden; 
+    display: block;
+  
+}
+.add img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+#container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.add-to-cart {
+    background-color:#62B6CB;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart:hover {
+    background-color: #1B4965;
+    color: aliceblue;
+    
+}
+.cart-link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -7px;  /* Moves the badge above the cart link */
+    right: -9px; /* Moves it slightly to the right */
+    background-color: #1B4965;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it a circular badge */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
