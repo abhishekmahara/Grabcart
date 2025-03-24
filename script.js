@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const url = "https://fakestoreapi.com/products";
     let products = [];
 
-    if (!cartCounter || !dataContainer || !searchInput || !searchButton) {
-        console.error('One or more elements not found. Please check your HTML IDs.');
-        return;
-    }
 
     function updateCartCounter() {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];

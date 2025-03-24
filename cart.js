@@ -1,18 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cartItemsContainer = document.getElementById("cart-items");
   const totalPriceElement = document.getElementById("total-price");
-  const cartCounter = document.getElementById("cart-counter");
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  function updateCartCounter() {
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    if (totalItems > 0) {
-      cartCounter.style.display = "flex";
-      cartCounter.textContent = totalItems;
-    } else {
-      cartCounter.style.display = "none";
-    }
-  }
+  
 
   function addToCart(product) {
     if (!product || !product.id) {
@@ -34,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
-    updateCartCounter();
   }
 
   function renderCart() {
@@ -44,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cart.length === 0) {
       cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
       totalPriceElement.textContent = "Total: $0.00";
-      updateCartCounter();
       return;
     }
 
@@ -66,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
-    updateCartCounter();
   }
 
   cartItemsContainer.addEventListener("input", function (e) {
